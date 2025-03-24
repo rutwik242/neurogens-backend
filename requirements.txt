@@ -1,0 +1,8 @@
+flask
+flask-cors
+google-generativeai
+pillow
+pymongo
+requests
+beautifulsoup4
+reportlab

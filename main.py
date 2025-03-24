@@ -20,7 +20,8 @@ genai.configure(api_key="YOUR_GEMINI_API_KEY")
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 # MongoDB Atlas
-client = MongoClient("mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?retryWrites=true&w=majority")
+import os
+client = MongoClient(os.environ.get("MONGODB_URI"))
 db = client["product_catalog"]
 collection = db["entries"]
 
